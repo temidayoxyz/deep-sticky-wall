@@ -1,9 +1,14 @@
 export const STYLES = `
+.dsnw-viewport {
+  width: 100%;
+  height: 100%;
+  min-height: 100vh;
+  overflow: auto;
+  background: #12121a;
+}
 .dsnw-wall {
   position: relative;
-  width: 100%;
-  min-height: 100%;
-  overflow: hidden;
+  overflow: visible;
   background-color: #1e1e28;
   background-image: radial-gradient(rgba(255,255,255,0.22) 1px, transparent 1px);
   background-size: 24px 24px;
@@ -14,7 +19,7 @@ export const STYLES = `
   position: absolute;
   top: 12px;
   left: 12px;
-  z-index: 20;
+  z-index: 30;
   display: flex;
   gap: 8px;
   align-items: center;
@@ -22,18 +27,16 @@ export const STYLES = `
 .dsnw-button {
   border: 0;
   border-radius: 8px;
-  padding: 8px 12px;
+  padding: 8px 14px;
   font-size: 13px;
   cursor: pointer;
-  background: rgba(255,255,255,0.12);
+  background: rgba(255,255,255,0.14);
   color: #fff;
   backdrop-filter: blur(6px);
 }
-.dsnw-button:hover { background: rgba(255,255,255,0.2); }
+.dsnw-button:hover { background: rgba(255,255,255,0.22); }
 .dsnw-note {
   position: absolute;
-  width: 220px;
-  min-height: 120px;
   padding: 10px;
   border-radius: 10px;
   box-shadow: 0 8px 24px rgba(0,0,0,0.28);
@@ -59,7 +62,15 @@ export const STYLES = `
   justify-content: space-between;
   align-items: center;
 }
-.dsnw-note .dsn-delete { cursor: pointer; border: 0; background: rgba(0,0,0,0.12); border-radius: 6px; padding: 2px 8px; }
+.dsnw-note .dsn-delete {
+  cursor: pointer;
+  border: 0;
+  background: rgba(0,0,0,0.16);
+  color: #1f1f1f;
+  border-radius: 6px;
+  padding: 4px 10px;
+  font-size: 12px;
+}
 .dsnw-colors { display: flex; gap: 4px; }
 .dsnw-color-dot { width: 18px; height: 18px; border-radius: 50%; cursor: pointer; border: 2px solid rgba(0,0,0,0.15); }
 .dsnw-empty {
@@ -70,5 +81,6 @@ export const STYLES = `
   opacity: .7;
   text-align: center;
   pointer-events: none;
+  max-width: 360px;
 }
 `
