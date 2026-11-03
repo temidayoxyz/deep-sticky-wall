@@ -1,0 +1,64 @@
+{
+  "name": "dsh-deep-sticky-wall",
+  "version": "0.1.0",
+  "description": "Deep Sticky Wall — a dotted canvas of sticky notes in the DeepSeek Harness sidebar",
+  "license": "MIT",
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./client": "./lib/client/index.js",
+    "./client/index.js": "./lib/client/index.js",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib/index.js",
+    "lib/client",
+    "cordis.patch.yml",
+    "README.md",
+    "LICENSE"
+  ],
+  "keywords": [
+    "deepseek",
+    "deepseek-harness",
+    "dsh",
+    "dsh-plugin",
+    "sticky-notes",
+    "canvas"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/temidayoxyz/deep-sticky-wall.git"
+  },
+  "bugs": { "url": "https://github.com/temidayoxyz/deep-sticky-wall/issues" },
+  "homepage": "https://github.com/temidayoxyz/deep-sticky-wall#readme",
+  "dsh": {
+    "bundle": { "patch": "./cordis.patch.yml" },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": [
+        "@deepseek-ai/dsh-client-locale",
+        "@deepseek-ai/dsh-client-ui-layout",
+        "@deepseek-ai/dsh-client-ui-slots"
+      ]
+    }
+  },
+  "scripts": {
+    "build": "tsdown",
+    "typecheck": "tsc --noEmit",
+    "prepare": "tsdown"
+  },
+  "peerDependencies": {
+    "react": ">=18"
+  },
+  "peerDependenciesMeta": {
+    "react": { "optional": true }
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "@types/react": "^18.3.1",
+    "tsdown": "^0.16.8",
+    "typescript": "^5.8.0"
+  }
+}
