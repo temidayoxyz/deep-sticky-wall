@@ -74,10 +74,10 @@ function findEmptySpot(notes: Note[], canvasWidth: number, canvasHeight: number)
 export function StickyIcon(props: IconProps = {}) {
   const size = props.size ?? 18
   return (
-    <svg width={size} height={size} viewBox="0 0 24 24" aria-hidden="true">
-      <path d="M6 3h12a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2z" fill="#fde68a" />
-      <path d="M6 3h12a2 2 0 0 1 2 2v4H4V5a2 2 0 0 1 2-2z" fill="#f59e0b" />
-      <path d="M7 12h10M7 16h7" stroke="#92400e" strokeWidth="1.4" strokeLinecap="round" />
+    <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" aria-hidden="true">
+      <path d="M6 4h9l5 5v11a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z" />
+      <path d="M15 4v5h5" />
+      <path d="M8 12h8M8 16h5" strokeLinecap="round" />
     </svg>
   )
 }

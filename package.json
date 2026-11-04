@@ -1,6 +1,6 @@
 {
   "name": "dsh-deep-sticky-wall",
-  "version": "0.1.0",
+  "version": "0.1.2",
   "description": "Deep Sticky Wall — a dotted canvas of sticky notes in the DeepSeek Harness sidebar",
   "license": "MIT",
   "type": "module",
